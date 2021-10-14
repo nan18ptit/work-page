@@ -1,0 +1,150 @@
+/* Reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ /* 
+ 1. vi tri
+ 2. kich thuoc
+ 3. mau sac
+ 4. kieu dang
+ */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+/* Header */
+
+ header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+ }
+ #nav {
+     display: flex;
+     justify-content: right;
+     list-style-type: none; 
+     margin: 0;
+ } 
+ #nav .nav--title{
+     font-size: 20px;
+     font-weight: 500;
+     line-height: 80px;
+     padding: 30px;
+     color: #000;
+     text-decoration: none;
+ }
+ul .nav--title:last-child{
+     margin-right: 40px;
+}
+ #nav .nav--title:hover, #btn--menu:hover{
+    color: #FF6464;
+ }
+
+ #btn--menu {
+    display: none;
+    float: right;
+    padding: 24px;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+}
+/* Section: Featured works */
+
+.container{
+    padding-top: 80px;
+}
+.works-section{
+    margin: 0 80px;
+    padding: 16px  0;
+    border-bottom: 1px solid #E0E0E0;
+}
+.section-name{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.work-img img{
+    padding: 16px 0;
+    width: 100%;
+    border-radius: 6px;
+}
+.work-dental{
+    padding:12px ;
+}
+.work-title{
+    font-size: 30px;
+    font-weight: 700;
+}
+.work-sub-title p{
+    display: inline-block;
+    margin-right: 20px;
+}
+.work-sub-title .sub-time{
+    padding: 1px 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #142850;
+    border-radius: 16px;
+}
+.work-sub-title .sub-content{
+    font-size: 20px;
+    color: #8695A4;
+}
+.content{
+    margin-bottom: 0;
+}
+/* footer */
+footer{
+    text-align: center;
+    padding: 120px 0 36px;
+}
+footer .contact-icon a{
+    padding: 16px;
+    font-size: 28px;
+    color: #000;
+    text-decoration: none;
+    
+}
+footer p{
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+/* repomsive : mobile */
+@media screen and (max-width: 768px) {
+    #btn--menu {
+        display: block;
+    }
+   #nav .nav--title{
+        display: none;
+   }
+   #nav a{
+       line-height: 40px;
+   }
+   ul .nav--title:last-child{
+       margin-right: 0;
+   }
+   .works-section{
+    margin: 0;
+    padding: 0;
+    }
+    .section-name{
+        font-size: 30px;
+    }
+    .work-title{
+        font-size: 24px;
+    }
+    .work-sub-title .sub-time{
+        font-size: 16px;
+    }
+    .work-sub-title .sub-content{
+        font-size: 16px;
+    }
+}
