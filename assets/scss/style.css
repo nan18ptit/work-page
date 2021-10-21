@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header ul .nav--title, footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  height: 80px;
+  padding-right: 50px;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  list-style-type: none;
+}
+
+header ul .nav--title {
+  padding: 10px;
+  margin: 20px;
+  line-height: 80px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+header ul #btn--menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nav--title:hover {
+  color: #FF6464;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding-right: 0;
+  }
+  header ul a {
+    display: none;
+  }
+  header ul #btn--menu {
+    display: inline;
+  }
+}
+
+.container {
+  padding-top: 80px;
+}
+
+.works-section {
+  margin: 16px 80px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.works-section .section-name {
+  font-size: 44px;
+  font-weight: 900;
+}
+
+.works-section .work-img {
+  margin-bottom: 16px;
+}
+
+.works-section .work-img img {
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.works-section .work-dental {
+  padding: 12px;
+}
+
+.works-section .work-dental .work-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.works-section .work-dental .content {
+  margin-bottom: 0;
+}
+
+.work-sub-title p {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.work-sub-title .sub-time {
+  padding: 1px 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #142850;
+  border-radius: 16px;
+}
+
+.work-sub-title .sub-content {
+  font-size: 20px;
+  color: #8695A4;
+}
+
+@media screen and (max-width: 768px) {
+  .works-section {
+    margin: 0;
+    padding: 0;
+  }
+  .works-section .section-name {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .works-section .work-img {
+    margin-bottom: 0;
+  }
+  .works-section .work-title {
+    padding-top: 0;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .works-section .work-sub-title {
+    font-size: 16px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 70px 0 36px;
+}
+
+footer a {
+  padding: 16px;
+  font-size: 28px;
+}
+
+footer :hover {
+  color: #FF6464;
+}
+
+footer p {
+  padding-top: 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=style.css.map */

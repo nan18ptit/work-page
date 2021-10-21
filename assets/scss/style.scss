@@ -1,0 +1,135 @@
+// modulo
+@use 'reset';
+@use 'variables';
+@use 'extend';
+@use 'mixin';
+
+.body{
+    @extend %font_size;
+}
+// Header
+header{
+    @include position_fixed(0, 0, 0);
+    @include bgr_color($color_bgr);
+     height: 80px;
+     padding-right: 50px;
+    ul{
+        display: flex;
+        justify-content: right;
+        list-style-type: none; 
+        .nav--title{  
+            padding: 10px;
+            margin: 20px;
+            line-height: 80px;
+            @include font_text($font_size_title, 500);
+            @extend %url_style;
+        }
+        #btn--menu{
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+}
+.nav--title:hover{
+    color: $color_hover;
+}
+//  reponsive header: mobile
+@media screen and (max-width: 768px){
+    header{
+        padding-right: 0;
+        ul{
+            a{
+                display: none;
+            }
+            #btn--menu{
+                display: inline;
+            }
+        }
+    }  
+}
+// content
+.container{
+    padding-top: 80px;
+}
+.works-section{
+    margin: 16px 80px;
+    border-bottom: 1px solid $color_border;
+    .section-name{
+        @include font_text(44px, 900);
+    }
+    .work-img{
+        margin-bottom: 16px;
+        img{
+            padding: 12px 0;
+            width: 100%;
+            border-radius: 6px;
+        }
+    }
+    .work-dental{
+        padding: 12px;
+        .work-title{
+            @include font_text(30px, 700);
+        } 
+        .content{
+            margin-bottom: 0;
+        }
+    }
+    
+}
+.work-sub-title{
+    p{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .sub-time{
+        padding: 1px 12px;
+        @include font_text(18px, 700);
+        color: #fff;
+        background-color: $color_time;
+        border-radius: 16px;
+   }
+    .sub-content{
+        font-size: $font_size_title;
+        color: $color_sub_title;
+    }
+}
+
+//  reponsive content: mobile
+@media screen and (max-width: 768px){
+    .works-section{
+        margin: 0;
+        padding: 0;
+        .section-name{
+            @include font_text(30px, 700);
+        }
+        .work-img{
+            margin-bottom: 0;
+        }
+        .work-title{
+            padding-top: 0;
+            @include font_text(24px, 700);
+        }
+        .work-sub-title{
+            font-size: $font_size_main;
+        }
+    }
+}
+
+// footer
+footer{
+    text-align: center;
+    padding: 70px 0 36px;
+    a{
+        padding: 16px;
+        font-size: 28px;
+        @extend %url_style;
+    }
+    :hover{
+        color: $color_hover;
+    }
+    p{
+        padding-top: 12px;
+        font-size: 14px;
+    }
+}
