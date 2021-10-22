@@ -133,12 +133,15 @@ header ul #btn--menu {
   .works-section .work-img {
     margin-bottom: 0;
   }
-  .works-section .work-title {
+  .works-section .work-dental .work-title {
     padding-top: 0;
     font-size: 24px;
     font-weight: 700;
   }
-  .works-section .work-sub-title {
+  .work-sub-title .sub-time {
+    font-size: 16px;
+  }
+  .work-sub-title .sub-content {
     font-size: 16px;
   }
 }

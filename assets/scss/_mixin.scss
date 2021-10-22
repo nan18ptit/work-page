@@ -1,11 +1,11 @@
 // mixin
-@mixin position_fixed($top, $right, $left) {
+@mixin position-fixed($top, $right, $left) {
     position: fixed;
     top: $top;
     right: $right;
     left: $left;
 }
-@mixin bgr_color($color) {
+@mixin bgr-color($color) {
     background-color: $color;
 }
  @mixin font_text($size, $height) {

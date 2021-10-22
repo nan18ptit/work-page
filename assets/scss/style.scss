@@ -1,16 +1,54 @@
 // modulo
-@use 'reset';
-@use 'variables';
-@use 'extend';
-@use 'mixin';
+// @use 'reset';
+// @use 'variables';
+// @use 'extend';
+// @use "mixin";
 
+//variables
+$color_bgr: #fff;
+$color_hover: #FF6464;
+$color_time: #142850;
+$color_sub_title: #8695A4;
+$color_border: #E0E0E0;
+$font_family_main: Arial, Helvetica, sans-serif;
+$font_size_main: 16px;
+$font_size_title: 20px;
+// extent
+%font_size{
+    font-size: $font_size_main;
+    font-family: $font_family_main;
+}
+%url_style{
+    text-decoration: none;
+    color: #000;
+}
+//mixin
+@mixin position-fixed($top, $right, $left) {
+    position: fixed;
+    top: $top;
+    right: $right;
+    left: $left;
+}
+@mixin bgr-color($color) {
+    background-color: $color;
+}
+ @mixin font_text($size, $height) {
+     font-size: $size;
+     font-weight: $height;
+ }
+ // scss
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 .body{
     @extend %font_size;
 }
 // Header
 header{
-    @include position_fixed(0, 0, 0);
-    @include bgr_color($color_bgr);
+    @include position-fixed(0, 0, 0);
+    @include bgr-color($color_bgr);
      height: 80px;
      padding-right: 50px;
     ul{
@@ -106,12 +144,19 @@ header{
         .work-img{
             margin-bottom: 0;
         }
-        .work-title{
-            padding-top: 0;
-            @include font_text(24px, 700);
+        .work-dental{
+            .work-title{
+                padding-top: 0;
+                @include font_text(24px, 700);
+            }
         }
-        .work-sub-title{
-            font-size: $font_size_main;
+    }
+    .work-sub-title{
+        .sub-time{
+            font-size: 16px;
+        }
+        .sub-content{
+            font-size: 16px;
         }
     }
 }
